@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.herosection{
+  background-image: url();
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 83vh;
+  display: grid;
+  place-items: center;
+  z-index: 1;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.herosection::after{
+  position: absolute;
+  content: '';
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 83vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.herosectionrow1{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #eee;
+}
+
+.herosectionrow2{
   color: white;
+  display: flex;
+  justify-content: flex-start;
+  width: 90%;
 }
 
-.App-link {
-  color: #61dafb;
+.herosectioncolumn{
+  width: 40%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.herosectioncolumn > h1{
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.herosectioncolumn > p{
+  margin-top: 20px 
+}
+
+.herosectionbuttondiv{
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.herosectionbuttondiv > button{
+  background-color: #fbb040;
+  border: none;
+  padding: 15px;
+  color: black;
+  font-weight: 600;
+  font-size: 0.8rem;
+  /* margin: 20px; */
+  width: 30%;
+}
+
+.servicesection{
+  padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.servicesection > p{
+ text-align: center;
+ font-size: 1.5rem;
+}
+
+.servicerow{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  width: 90%;
+}
+
+.servicecolumn{
+  width: 50%;
+}
+
+.servicecolumninner{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.servicecolumninner1{
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fbb040;
+
+}
+.servicedescriptiondiv > h2{
+  color: #fbb040;
+  font-weight: 500;
+}
+
+.servicedescriptiondiv > p{
+  font-size: 1.2rem;
+}
+
+.servicedescriptiondiv{
+  margin: 30px 0;
 }
