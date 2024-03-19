@@ -5,8 +5,8 @@
 }
 
 .herosection{
-  background-image: url();
-  background-position: 100% 100%;
+  background-image: url(./images/herosectionimage.jpg);
+  background-position: center center;
   background-size: cover;
   height: 83vh;
   display: grid;
@@ -34,6 +34,11 @@
   align-items: center;
   justify-content: center;
   color: #eee;
+}
+
+.herosectionrow1 > img{
+  height: 120px;
+  width: 120%;
 }
 
 .herosectionrow2{
@@ -73,6 +78,10 @@
   width: 30%;
 }
 
+.serviceparadiv{
+  display: none;
+}
+
 .servicesection{
   padding: 30px 0;
   display: flex;
@@ -94,13 +103,32 @@
   width: 90%;
 }
 
-.servicecolumn{
+.servicecolumn1{
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.servicecolumn2{
+  width: 50%;
+}
+
+.servicecolumn2 > p{
+  display: none;
+}
+
+.servicecolumn1 > img{
+  width: 80%;
 }
 
 .servicecolumninner{
   display: flex;
+  width: 100%;
   justify-content: space-evenly;
+  position: relative;
+  bottom: 50px;
 }
 
 .servicecolumninner1{
@@ -112,8 +140,8 @@
   align-items: center;
   justify-content: center;
   background-color: #fbb040;
-
 }
+
 .servicedescriptiondiv > h2{
   color: #fbb040;
   font-weight: 500;
@@ -124,5 +152,151 @@
 }
 
 .servicedescriptiondiv{
-  margin: 30px 0;
+  margin-bottom: 30px;
+}
+
+.footersection{
+  display: flex;
+  background-color: #fbb040;
+  padding: 20px 50px;
+}
+
+.footercolumn1{
+  width: 80%;
+}
+
+.footercolumn1 > p , .footercolumn2 > p{
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.footercolumn1 > ul, .footercolumn2 > ul{
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.footercolumn1 > ul >li, .footercolumn2 > ul > li{
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.footercolumn2{
+  width: 20%;
+}
+
+@media screen and (max-width:600px) {
+
+  .herosection{
+    height: 45vh;
+    gap: 0;
+  }
+
+  .herosection::after{
+    height: 45vh;
+  }
+
+  .herosectionrow2{
+    margin-bottom: 50px;
+  }
+
+  .herosectioncolumn{
+    width: 100%;
+    text-align: center;
+  }
+
+  .herosectionparadiv{
+    display: none;
+  }
+
+  .herosectioncolumn > h1{
+    font-size: 2rem;
+  }
+
+  .servicerow{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .servicedescriptiondiv{
+    width: 100%;
+  }
+
+  .servicecolumn1, .servicecolumn2{
+    width: 100%;
+  }
+
+  .servicecolumn1 > img{
+    width: 100%;
+  }
+
+  .servicecolumn2{
+    padding: 0 20px;
+  }
+
+  .servicecolumninner1{
+    width: 110px;
+    height: 110px;
+  }
+
+  .servicecolumninner{
+    bottom: 170px;
+    gap: 50px;
+  }
+
+  .servicesection{
+    padding: 0;
+  }
+  
+  .servicesection > p{
+    display: none;
+   }
+
+   .servicecolumn2 > p{
+    text-align: center;
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  .servicedescriptiondiv{
+    text-align: center;
+  }
+
+  .footersection{
+    flex-direction: column;
+  }
+   
+  .footercolumn1,.footercolumn2{
+    width: 100%;
+  }
+
+  .footercolumn1 > ul{
+    flex-direction: column;
+  }
+
+  .footercolumn2{
+    margin-top: 30px;
+  }
+
+  .footercolumn2 > p{
+    text-align: center;
+  }
+
+  .serviceparadiv{
+    display: block;
+    text-align: center;
+    padding: 50px;
+  }
+
+  .herosectionbuttondiv{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .herosectionbuttondiv > button{
+    width: 50%;
+  }
 }

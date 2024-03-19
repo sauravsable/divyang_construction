@@ -1,4 +1,5 @@
 import React from 'react'
+import serviceimage from '../images/serviceimage.jpg';
 
 const data = [
     {
@@ -21,12 +22,21 @@ const data = [
 ]
 export default function Service() {
   return (
-    <section className='servicesection'>
+    <>
+     <div className="serviceparadiv">
+            <p>With a proven track record of successful projects, I bring expertise and quality craftsmanship to every job.</p>
+
+            <div className="herosectionbuttondiv">
+                <button> +91 9825033853</button>
+                <button>E-Mail</button>
+            </div>
+            </div>
+            <section className='servicesection'>
       <p>Service</p>
 
       <div className="servicerow">
-        <div className="servicecolumn">
-            <img src="" alt="" />
+        <div className="servicecolumn1">
+            <img src={serviceimage} alt="serviceimage" />
 
             <div className="servicecolumninner">
                 <div className="servicecolumninner1">
@@ -43,7 +53,8 @@ export default function Service() {
             </div>
         </div>
 
-        <div className="servicecolumn">
+        <div className="servicecolumn2">
+            <p>Service</p>
             {
                 data.map((item,index)=>(
                     <div key={index} className="servicedescriptiondiv">
@@ -54,6 +65,8 @@ export default function Service() {
             }
         </div>
       </div>
-    </section>
+    </section>        
+    </>
+    
   )
 }
